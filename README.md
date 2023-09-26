@@ -39,4 +39,7 @@ This is a test project to get data from different sources: for LLM
    A lot of other tools and sources are paid per data or stream. Airbyte is free and cover most of 
    the usecases. You pay only if you dont want to pay to configure for the connectors manually.
    The airbyte CDK is good for that.
+
+## References:
+   https://www.youtube.com/watch?v=oeshl0H1JcU
    
