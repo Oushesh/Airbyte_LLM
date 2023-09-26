@@ -49,3 +49,14 @@ This is a test project to get data from different sources: for LLM
 ## Custom Connector
     How and why before?
 ![airbyte](airbyte.png)
+
+## Airbyte under the Hood:
+   For each Data Source you have: airbyte connector has to be setup. 
+   Example:
+
+## Airbyte CDk
+
+## No Code API Connectors or Low Code CDK:
+   * https://docs.airbyte.com/connector-development/connector-builder-ui/tutorial
+   * TODO: build a sample to do so.
+   * Similar 
