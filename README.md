@@ -15,7 +15,6 @@ This is a test project to get data from different sources: for LLM
 ## Goal:
    With all those Data then you can derive insights: 
 
-
 ## Example of ELT System
    API from the Frontend pulls from a source eg. Salesforce or JSON, Notion and move 
    to our destination (S3 or Snowflake as Datawarehouse). 
@@ -26,15 +25,18 @@ This is a test project to get data from different sources: for LLM
 
    Sales (Input) Connector --> Airbyte --> Snowflake Connector processed by dBT.
 
-
 ## ETL vs ELT System
    * ETL eg. : Salesforce --> Script for Transform --> Snowflake.
    * Advantages of ETL vs ELT --> In the case your raw Data is needed by several Stakeholders
      like Business Team, Advertising Team or other teams. You can in theory move all the information
      to destination source and finally transform it individually for different teams. (Transfer and sync once)
 
-
 ## Example Project: 
+    Low Key CDK for the connectors and how to test the connectors before setting into production.
+    https://www.youtube.com/watch?v=LQ2RqsrxIRc 
 
-   
+## Why airbyte?
+   A lot of other tools and sources are paid per data or stream. Airbyte is free and cover most of 
+   the usecases. You pay only if you dont want to pay to configure for the connectors manually.
+   The airbyte CDK is good for that.
    
