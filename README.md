@@ -42,4 +42,7 @@ This is a test project to get data from different sources: for LLM
 
 ## References:
    https://www.youtube.com/watch?v=oeshl0H1JcU
+
+## Getting Started
+   https://github.com/airbytehq/airbyte/tree/master
    
