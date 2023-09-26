@@ -46,3 +46,6 @@ This is a test project to get data from different sources: for LLM
 ## Getting Started
    https://github.com/airbytehq/airbyte/tree/master
    
+## Custom Connector
+    How and why before?
+![airbyte](airbyte.png)
