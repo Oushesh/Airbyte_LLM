@@ -97,3 +97,7 @@ This is a test project to get data from different sources: for LLM
      * Why airbyte? Production ready connectors and UI + scaling advantages.
      * Airbyte with LLM: check and apply the tutorial needed.
      * Example
+
+
+## Combination with Dagster:
+   * 
