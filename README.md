@@ -154,11 +154,49 @@ This is a test project to get data from different sources: for LLM
     "horsepower" INTEGER
     );
            
+    Example 2: Nested Objects:
+    {
+        "make": "alfa romeo",
+        "model": "4c coupe",
+        "powertrain_specs":{"horsepower":247,"transmission": "6-speed"}
+    }
+
+    After normalisation we have:
+    CREATE TABLE "cars" (
+    "_airbyte_cars_hashid" VARCHAR,
+    "_airbyte_emitted_at" TIMESTAMP_WITH_TIMEZONE,
+    "_airbyte_normalized_at" TIMESTAMP_WITH_TIMEZONE,
+
+    "make" VARCHAR,
+    "model" VARCHAR
+    );
+    
+    CREATE TABLE "powertrain_specs" (
+    "_airbyte_powertrain_hashid" VARCHAR,
+    "_airbyte_cars_foreign_hashid" VARCHAR,
+    "_airbyte_emitted_at" TIMESTAMP_WITH_TIMEZONE,
+    "_airbyte_normalized_at" TIMESTAMP_WITH_TIMEZONE,
+    
+        "horsepower" INTEGER,
+        "transmission" VARCHAR
+    );
+
    There are some metadata columns that are produced and transferred 
    from destination core to the end table.
-   
     
+    Why normalisation? Well, simply because the Business Analytics 
+    team and visualisation team need visualisations from libraries like:
+    Tableau, Metabase and these work primarily using Pandas Dataframe, Apache
+    Parquet files, column data.
+    
+    Thats the result why we chose 
     
    * Deduping and why:
    * https://www.youtube.com/watch?v=I4fngMnkJzY&t=184s
-   * 
+
+## DBT
+   * Example Tutorial on DBT
+
+## References:
+   * https://github.com/airbytehq/airbyte/blob/master/docs/understanding-airbyte/basic-normalization.md#Rules
+   * https://docs.airbyte.com/understanding-airbyte/basic-normalization/
