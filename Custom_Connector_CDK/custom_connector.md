@@ -32,11 +32,13 @@
    * https://github.com/dbt-labs/jaffle_shop
 
 ## File Structure: 
-   * 
-
 
 ## Configuration Based Source
 
 ## Example of Schema from an api:
    Once you get the schema from the exchange api. Save it
    as a json file to serve for how 
+   
+## Dbt x Snowflake:
+    https://quickstarts.snowflake.com/guide/data_teams_with_dbt_cloud/?index=../..index#15
+   
