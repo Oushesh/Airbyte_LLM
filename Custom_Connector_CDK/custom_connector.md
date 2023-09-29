@@ -33,7 +33,6 @@
 
 ## Configuration Based Source
 
-
 ## Example of Schema from an api:
    Once you get the schema from the exchange api. Save it
    as a json file to serve for how 

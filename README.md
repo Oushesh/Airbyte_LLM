@@ -98,6 +98,67 @@ This is a test project to get data from different sources: for LLM
      * Airbyte with LLM: check and apply the tutorial needed.
      * Example
 
-
 ## Combination with Dagster:
+   
+
+## DBT for the Transformation of the Tables:
+   * Normalisation: why? Normalisation? 
+     - In the scenario of having a source connector with tables and sending to 
+       a destination connector. Sometimes in the tables some raws might contain
+       some json blob. The process of expanding those json parts is called Normalisation.
+       aka. making the data normal under the schema: "header", "single data entry".
+   * The other unfair advantage of Airbyte is the fact that DBT is used internally
+     to adapt the SQL Dialects to the destination queries. (e.g Big Query has different sql dialect than snowflake.)
+    
+     The following will explain the example of Normalisation:
+     
+     Let's assume we have the output from an api:
+     From source api:
+     {
+     "make": "alfa romeo",
+     "model": "4C coupe",
+     "horsepower": "247"
+     }
+     
+     The data output will be in json format. And the table created for Posgresql or other things will be like:
+     
+    CREATE TABLE "_airbyte_raw_cars" (
+     -- metadata added by airbyte
+     "_airbyte_ab_id" VARCHAR, -- uuid value assigned by connectors to each row of the data written in the destination.
+     "_airbyte_emitted_at" TIMESTAMP_WITH_TIMEZONE, -- time at which the record was emitted.
+     "_airbyte_data" JSONB -- data stored as a Json Blob.
+     );
+    
+     Then a basic normalization would create the following table:
+     CREATE TABLE "cars" (
+    "_airbyte_ab_id" VARCHAR,
+    "_airbyte_emitted_at" TIMESTAMP_WITH_TIMEZONE,
+    "_airbyte_cars_hashid" VARCHAR,
+    "_airbyte_normalized_at" TIMESTAMP_WITH_TIMEZONE,
+
+    -- data from source
+    "make" VARCHAR,
+    "model" VARCHAR,
+    "horsepower" INTEGER
+    );
+    
+    CREATE TABLE "cars" (
+    "_airbyte_ab_id" VARCHAR,
+    "_airbyte_emitted_at" TIMESTAMP_WITH_TIMEZONE,
+    "_airbyte_cars_hashid" VARCHAR,
+    "_airbyte_normalized_at" TIMESTAMP_WITH_TIMEZONE,
+
+    -- data from source
+    "make" VARCHAR,
+    "model" VARCHAR,
+    "horsepower" INTEGER
+    );
+           
+   There are some metadata columns that are produced and transferred 
+   from destination core to the end table.
+   
+    
+    
+   * Deduping and why:
+   * https://www.youtube.com/watch?v=I4fngMnkJzY&t=184s
    * 
