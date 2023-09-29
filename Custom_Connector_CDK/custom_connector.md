@@ -28,7 +28,11 @@
    1. Poke http tutorial: source_connector for exchange connector:
    * Reference: https://docs.airbyte.com/connector-development/config-based/tutorial/getting-started
 
+## DBT Example Project:
+   * https://github.com/dbt-labs/jaffle_shop
+
 ## File Structure: 
+   * 
 
 
 ## Configuration Based Source
