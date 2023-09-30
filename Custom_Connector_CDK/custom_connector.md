@@ -42,3 +42,14 @@
 ## Dbt x Snowflake:
     https://quickstarts.snowflake.com/guide/data_teams_with_dbt_cloud/?index=../..index#15
    
+   What makes DBT so special? 
+   Version Control on your transformations applied on the data.
+   From ETL came ELT because of cloud services and cheap memory cost +
+   increasing compute of cloud services providers like AWS,google gcp and azure.
+   
+    CI/CD versioning of the data. 
+    Example Bottleneck: was where the Data Engineering had to
+    write all of the models needed for all of the business usecases
+    as of jetblue.
+
+##  
