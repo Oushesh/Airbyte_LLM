@@ -6,7 +6,6 @@ Try running the following commands:
 - dbt run
 - dbt test
 
-
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
 - Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
@@ -17,3 +16,7 @@ Try running the following commands:
 ## My Personal Notes:
    * The aim of this demo is to test seeding of DBT where you have the files as csv and you use those files to define the sql models
    and the schema used.
+
+## ec2 instance for serving the postgresql
+   -m : model flag
+   dbt run -m team_details
