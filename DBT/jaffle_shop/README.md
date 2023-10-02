@@ -78,4 +78,7 @@ For more information on dbt:
 ---
 
 ## Setting up DBT with Posgresql:
+   * Refer: https://docs.getdbt.com/docs/core/connect-data-platform/postgres-setup
+
+## Connection with Posgresql:
    * 
