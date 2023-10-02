@@ -40,6 +40,10 @@
      -- Reference the macro in a model
      {{ calculate_average('column_name') }}
 
+## Input File: csv
+   Then the data is seeded to dbt using .csv
+   
+
 ## References: 
    * https://www.youtube.com/watch?v=qOx8l_QFz9I&list=PLy4OcwImJzBLJzLYxpxaPUmCWp8j1esvT&index=2
    * https://github.com/dbt-labs/jaffle_shop/tree/main/models
