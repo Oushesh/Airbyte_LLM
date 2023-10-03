@@ -97,3 +97,44 @@ Happy modeling!
 [0m18:25:36.974698 [debug] [MainThread]: Command `dbt init` succeeded at 18:25:36.974036 after 9.60 seconds
 [0m18:25:36.975727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10262a2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102785890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102785950>]}
 [0m18:25:36.976358 [debug] [MainThread]: Flushing usage events
+[0m21:22:51.573560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10877ec90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087a06d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087a0ed0>]}
+
+
+============================== 21:22:51.577091 | cc9d34b5-dee3-4f06-bef7-0d2e8822af6c ==============================
+[0m21:22:51.577091 [info ] [MainThread]: Running with dbt=1.6.4
+[0m21:22:51.577629 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/ousheshharadhun/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt init basketball_players', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:22:51.578431 [debug] [MainThread]: Starter project path: /Users/ousheshharadhun/Documents/Workspace/Airbyte_LLM/DBT/dbt_env/lib/python3.11/site-packages/dbt/include/starter_project
+[0m21:22:51.586940 [info ] [MainThread]: 
+Your new dbt project "basketball_players" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m21:22:51.587241 [info ] [MainThread]: Setting up your profile.
+[0m21:22:54.694445 [debug] [MainThread]: Command `dbt init` succeeded at 21:22:54.693930 after 3.14 seconds
+[0m21:22:54.695345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1042fa290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083a7450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1042c3910>]}
+[0m21:22:54.695941 [debug] [MainThread]: Flushing usage events
+[0m22:25:50.172925 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ccbad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108598250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108cedd50>]}
+
+
+============================== 22:25:50.176593 | 39b6120c-f685-444a-803c-fa84c95cee2b ==============================
+[0m22:25:50.176593 [info ] [MainThread]: Running with dbt=1.6.4
+[0m22:25:50.177110 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/ousheshharadhun/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt seed', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:25:50.177594 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/ousheshharadhun/Documents/Workspace/Airbyte_LLM/DBT/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m22:25:50.178045 [debug] [MainThread]: Command `dbt seed` failed at 22:25:50.177964 after 0.03 seconds
+[0m22:25:50.178319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108cedc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108cc9050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108cd9510>]}
+[0m22:25:50.178615 [debug] [MainThread]: Flushing usage events
