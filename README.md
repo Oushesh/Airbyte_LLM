@@ -51,15 +51,14 @@
    Example: Open Source Data Integration: https://wwws.youtube.com/watch?v=oeshl0H1JcU
    https://github.com/airbytehq/airbyte/tree/master
     Google Sheets API (Source Connector) --> Snowflake (Destination Connector)
-    
 
 ## Custom Connector
     How and why before?
 ![airbyte](airbyte.png)
 
 ## Airbyte under the Hood:
-   For each Data Source you have: airbyte connector has to be setup. 
-   Example:
+   For each Data Source you have: airbyte connector has to be setup.
+   
 
 ## Airbyte CDk
 
@@ -108,103 +107,6 @@
 ## Why having a pipeline monitoring tool?
    Monitor how things are progressing: Dagster DAG Graph tool.
    Folder: dagster
-   
-
-## DBT for the Transformation of the Tables:
-   * Normalisation: why? Normalisation? 
-     - In the scenario of having a source connector with tables and sending to 
-       a destination connector. Sometimes in the tables some raws might contain
-       some json blob. The process of expanding those json parts is called Normalisation.
-       aka. making the data normal under the schema: "header", "single data entry".
-   * The other unfair advantage of Airbyte is the fact that DBT is used internally
-     to adapt the SQL Dialects to the destination queries. (e.g Big Query has different sql dialect than snowflake.)
-    
-     The following will explain the example of Normalisation:
-     
-     Let's assume we have the output from an api:
-     From source api:
-     {
-     "make": "alfa romeo",
-     "model": "4C coupe",
-     "horsepower": "247"
-     }
-     
-     The data output will be in json format. And the table created for Posgresql or other things will be like:
-     
-    CREATE TABLE "_airbyte_raw_cars" (
-     -- metadata added by airbyte
-     "_airbyte_ab_id" VARCHAR, -- uuid value assigned by connectors to each row of the data written in the destination.
-     "_airbyte_emitted_at" TIMESTAMP_WITH_TIMEZONE, -- time at which the record was emitted.
-     "_airbyte_data" JSONB -- data stored as a Json Blob.
-     );
-    
-     Then a basic normalization would create the following table:
-     CREATE TABLE "cars" (
-    "_airbyte_ab_id" VARCHAR,
-    "_airbyte_emitted_at" TIMESTAMP_WITH_TIMEZONE,
-    "_airbyte_cars_hashid" VARCHAR,
-    "_airbyte_normalized_at" TIMESTAMP_WITH_TIMEZONE,
-
-    -- data from source
-    "make" VARCHAR,
-    "model" VARCHAR,
-    "horsepower" INTEGER
-    );
-    
-    CREATE TABLE "cars" (
-    "_airbyte_ab_id" VARCHAR,
-    "_airbyte_emitted_at" TIMESTAMP_WITH_TIMEZONE,
-    "_airbyte_cars_hashid" VARCHAR,
-    "_airbyte_normalized_at" TIMESTAMP_WITH_TIMEZONE,
-
-    -- data from source
-    "make" VARCHAR,
-    "model" VARCHAR,
-    "horsepower" INTEGER
-    );
-           
-    Example 2: Nested Objects:
-    {
-        "make": "alfa romeo",
-        "model": "4c coupe",
-        "powertrain_specs":{"horsepower":247,"transmission": "6-speed"}
-    }
-
-    After normalisation we have:
-    CREATE TABLE "cars" (
-    "_airbyte_cars_hashid" VARCHAR,
-    "_airbyte_emitted_at" TIMESTAMP_WITH_TIMEZONE,
-    "_airbyte_normalized_at" TIMESTAMP_WITH_TIMEZONE,
-
-    "make" VARCHAR,
-    "model" VARCHAR
-    );
-    
-    CREATE TABLE "powertrain_specs" (
-    "_airbyte_powertrain_hashid" VARCHAR,
-    "_airbyte_cars_foreign_hashid" VARCHAR,
-    "_airbyte_emitted_at" TIMESTAMP_WITH_TIMEZONE,
-    "_airbyte_normalized_at" TIMESTAMP_WITH_TIMEZONE,
-    
-        "horsepower" INTEGER,
-        "transmission" VARCHAR
-    );
-
-   There are some metadata columns that are produced and transferred 
-   from destination core to the end table.
-    
-    Why normalisation? Well, simply because the Business Analytics 
-    team and visualisation team need visualisations from libraries like:
-    Tableau, Metabase and these work primarily using Pandas Dataframe, Apache
-    Parquet files, column data.
-    
-    Thats the result why we chose 
-    
-   * Deduping and why:
-   * https://www.youtube.com/watch?v=I4fngMnkJzY&t=184s
-
-## DBT
-   * Example Tutorial on DBT
 
 ## References:
    * https://github.com/airbytehq/airbyte/blob/master/docs/understanding-airbyte/basic-normalization.md#Rules
