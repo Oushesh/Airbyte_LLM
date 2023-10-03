@@ -14,3 +14,4 @@
 ## Hands On:
    dagster new-project etl
    Advantages:
+   https://www.youtube.com/watch?v=oeshl0H1JcU

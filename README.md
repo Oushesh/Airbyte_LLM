@@ -22,44 +22,37 @@
                 DataLakes: eg. s3 Buckets (holds all structured types)
     
          * Transform - dbT (write sql models on top of the data)
-       
-       * Goal: Derive Insights to help better sales.     
+         * Goal: Derive Insights to help better sales.     
 
-s
-## Goal:
-   With all those Data then you can derive insights: 
 
 ## Example of ELT System
-   API from the Frontend pulls from a source eg. Salesforce or JSON, Notion and move 
-   to our destination (S3 or Snowflake as Datawarehouse). 
-   Option 1: You could have the scripts written manually in python to do so. but over the years
+   Source Connector (e.g. Salesforce, hubspot, JSON, Notion) ---> Frontend API pulls data 
+   ---> Desintation Connector (s3 as Datalake or Snowflake as Datawarehouse).
+
+
+   Option 1: In the past, you could have the scripts written manually in python to do so (api grabbing the data ) but over the years
    the cost of compute has been significantly decreased such that it makes sense to go for option 2.
     
    Option 2: ELT Tool
-
    Sales (Input) Connector --> Airbyte --> Snowflake Connector processed by dBT.
 
-## ETL vs ELT System
-   * ETL eg. : Salesforce --> Script for Transform --> Snowflake.
-   * Advantages of ETL vs ELT --> In the case your raw Data is needed by several Stakeholders
-     like Business Team, Advertising Team or other teams. You can in theory move all the information
-     to destination source and finally transform it individually for different teams. (Transfer and sync once)
-
 ## Example Project: 
-    Low Key CDK for the connectors and how to test the connectors before setting into production.
+   Low Key CDK for the connectors and how to test the connectors before setting into production.
     https://www.youtube.com/watch?v=LQ2RqsrxIRc 
 
-## Why airbyte?
+## Airbyte Advantage:
    A lot of other tools and sources are paid per data or stream. Airbyte is free and cover most of 
    the usecases. You pay only if you dont want to pay to configure for the connectors manually.
    The airbyte CDK is good for that.
+   
+   Offers huge advantage: new airbyte CDK
 
 ## References:
-   https://www.youtube.com/watch?v=oeshl0H1JcU
-
-## Getting Started
+   Example: Open Source Data Integration: https://wwws.youtube.com/watch?v=oeshl0H1JcU
    https://github.com/airbytehq/airbyte/tree/master
-   
+    Google Sheets API (Source Connector) --> Snowflake (Destination Connector)
+    
+
 ## Custom Connector
     How and why before?
 ![airbyte](airbyte.png)
@@ -112,7 +105,9 @@ s
      * Airbyte with LLM: check and apply the tutorial needed.
      * Example
 
-## Combination with Dagster:
+## Why having a pipeline monitoring tool?
+   Monitor how things are progressing: Dagster DAG Graph tool.
+   Folder: dagster
    
 
 ## DBT for the Transformation of the Tables:
