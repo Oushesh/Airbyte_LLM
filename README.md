@@ -1,3 +1,8 @@
+## Getting Started: 
+   * git clone https://github.com/airbytehq/airbyte
+   * ./run-ab-platform.sh will build the docker.
+   * 2 choices either build the connector using python or using the interface on the website.
+
 ## Why is ETL important in LLM?
    Lots of data. As the number of frameworks available increase
    there is a problem that lots of connectors have to be written
