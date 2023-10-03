@@ -4,3 +4,4 @@ Dagster_env
 Custom_Connector_CDK/source-exchange-tutorial/exchange_venv/*
 dbt_env
 Connectors/source-exchange-rates-tutorial/exchange_venv
+Connectors/Custom_Connector_CDK/source-exchange-rates-tutorial/exchange_venv
