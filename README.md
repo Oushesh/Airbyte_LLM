@@ -1,17 +1,31 @@
-# Airbyte_LLM
-This is a test project to get data from different sources: for LLM
+## Why is ETL important in LLM?
+   Lots of data. As the number of frameworks available increase
+   there is a problem that lots of connectors have to be written
+   over and over again resulting in high engineering costs from teams.
 
-## ELT defacto: really good tool
-   * Extract - API, Database
-   * Load - Databases: eg.
-   *        Datawarehouses: eg. Snowflake
-   *        DataLakes: eg. s3 Buckets 
+   As cloud computing came over, the costs of scaling went drastically
+   down and ETL was bound to exist. ETL provides (Extract data from source
+   connector, Transform the Data carry over to the Destination Connector.)
+  
+    ETL vs ELT.
+    ETL: Extract Transform Load
+    Extract Load and then Transform (this one is more frequent since 
+    its easier to transport the data to destination and transform
+    based on the different teams or stakeholders needs: example:
+    Business intelligence, Data Visualisation Tool.
 
-   * Transform - dbT (write sql models on top of the data)
 
-## Terminologies Understanding:
-    As the word says data being from raw to being converted --> DataLakes (raw data) --> DataWarehouse(converted Data as in processed Data) ready to be consumed by neural networks. 
+    ELT defacto: really good tool
+       * Extract from Source Connector
+         Load - Databases: Supabase, posgresql
+                Datawarehouses: eg. Snowflake (holds data ready for consumption)
+                DataLakes: eg. s3 Buckets (holds all structured types)
+    
+         * Transform - dbT (write sql models on top of the data)
+       
+       * Goal: Derive Insights to help better sales.     
 
+s
 ## Goal:
    With all those Data then you can derive insights: 
 
