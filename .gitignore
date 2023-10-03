@@ -3,3 +3,4 @@ dagster_langchain_Airbyte/dagster_langchain_venv
 Dagster_env
 Custom_Connector_CDK/source-exchange-tutorial/exchange_venv/*
 dbt_env
+Connectors/source-exchange-rates-tutorial/exchange_venv
