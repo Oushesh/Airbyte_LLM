@@ -1,5 +1,7 @@
-## DBT xx Airbyte:
-   
+## DBT:
+   DBT (Data Build Tool): https://github.com/dbt-labs/dbt-core
+   Its software engineering for Data Models (Table Data like SQL)
+   ![dbt_transform](dbt_transform.png)
 
 ## DBT for the Transformation of the Tables:
 * Normalisation: why? Normalisation?
