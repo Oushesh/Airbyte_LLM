@@ -138,3 +138,30 @@ Runtime Error
 [0m22:25:50.178045 [debug] [MainThread]: Command `dbt seed` failed at 22:25:50.177964 after 0.03 seconds
 [0m22:25:50.178319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108cedc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108cc9050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108cd9510>]}
 [0m22:25:50.178615 [debug] [MainThread]: Flushing usage events
+[0m18:02:05.209669 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105a13a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105a34dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105a358d0>]}
+
+
+============================== 18:02:05.213259 | 25bc376b-ec84-41b6-84f2-aa79862703bf ==============================
+[0m18:02:05.213259 [info ] [MainThread]: Running with dbt=1.6.4
+[0m18:02:05.213754 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/ousheshharadhun/.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init Churn_Prediction', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:02:05.214924 [debug] [MainThread]: Starter project path: /Users/ousheshharadhun/Documents/Workspace/Airbyte_LLM/DBT/dbt_env/lib/python3.11/site-packages/dbt/include/starter_project
+[0m18:02:05.219820 [info ] [MainThread]: 
+Your new dbt project "Churn_Prediction" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:02:05.220105 [info ] [MainThread]: Setting up your profile.
+[0m18:02:57.628672 [debug] [MainThread]: Command `dbt init` succeeded at 18:02:57.628128 after 52.44 seconds
+[0m18:02:57.629773 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105a10d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100272050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051d7350>]}
+[0m18:02:57.630360 [debug] [MainThread]: Flushing usage events
